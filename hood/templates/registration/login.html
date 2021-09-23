@@ -1,0 +1,35 @@
+{% extends 'registration/base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <form action="{% url 'login_user' %}" method="POST"
+        class="login ms-auto align-items-center justify-content-center p-4 p-md-5 border rounded-3 bg-light">
+        <div class="logo d-flex justify-content-center align-items-center">
+            <img src="../../../static/images/two-houses.png" width="45px" height="45px" alt="">
+        </div>
+        <br>
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Email or Username">
+            <label for="floatingInput">Email address or Username</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+        <hr class="my-4">
+        <small class="text-muted">By clicking login up, you agree to the terms of use.</small>
+        <p>Don't have an account?
+            <a name="" id="" href="/register">Create account</a>
+        </p>
+    </form>
+</div>
+
+{% endblock %}
