@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {% block styles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/framework.css' %}">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
@@ -20,13 +23,15 @@
     <link rel="icon" href="../../static/images/two-houses.png" type="image/x-icon">
     {% endblock %}
 
-    <title>Block Chain</title>
-  </head>
-  <body class="d-flex vw-100 vh-100 align-items-center justify-content-center">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>BlockChain</title>
+    {% endif %}
+    </head>
+  <body>
+    {% include 'navbar.html' %}
     {% block content %}
-    <button class="btn btn-primary">
-      <i class="fab fa-accessible-icon me-1"></i>Hello, world!
-    </button>
   {% endblock %}
 
 {% block scripts %}
