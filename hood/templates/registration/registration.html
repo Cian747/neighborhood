@@ -8,13 +8,12 @@
             <img src="../../../static/images/photo_album_e8hj.svg" height="400rem" width="600rem" alt="">
         </div>
         <div class="col-md-6">
-            <form id="register"
-                class="d-flex flex-column justify-content-center align-items-center p-4 p-md-5 border rounded-3 bg-dark"
-                action="" method="post">
+            <form id="register" class="d-flex flex-column justify-content-center align-items-center p-4 p-md-5 border rounded-3 bg-white" action="" method="post">
+                {% csrf_token %}
                 <div class="logo d-flex justify-content-center align-items-center">
                     <img src="../../../static/images/logo.png" width="45px" style="margin:2rem" height="45px" alt="">
                 </div>
-                {% csrf_token %}
+                {{ form.errors }}
                 <div class="mb-2">
                     <div>
                         {{ rgf.first_name }}
