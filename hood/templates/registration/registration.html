@@ -3,15 +3,17 @@
 
 {% block content %}
 <div class="container ">
-    <div class="row" style="margin-top:6rem;">
-        <div class="col-md-6 text-center text-lg-start ">
-            <img src="../../../static/images/photo_album_e8hj.svg" height="400rem" width="600rem" alt="">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../../../static/images/art_lover_yjfr.svg" alt="">
         </div>
         <div class="col-md-6">
-            <form id="register" class="d-flex flex-column justify-content-center align-items-center p-4 p-md-5 border rounded-3 bg-white" action="" method="post">
+            <form id="register"
+                class=" form-register p-4 border mt-4 rounded-3 bg-white"
+                action="" method="post" >
                 {% csrf_token %}
                 <div class="logo d-flex justify-content-center align-items-center">
-                    <img src="../../../static/images/logo.png" width="45px" style="margin:2rem" height="45px" alt="">
+                    <img src="../../../static/images/two-houses.png" width="45px" style="margin:2rem" height="45px" alt="">
                 </div>
                 {{ form.errors }}
                 <div class="mb-2">
@@ -53,7 +55,7 @@
                 <p>Already have an account?
                     <a href="/">Login</a>
                 </p>
-            </div>    
+            </div>
         </div>
     </div>
 </div>
