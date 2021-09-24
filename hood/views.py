@@ -100,6 +100,7 @@ def edit_profile(request,id):
 def my_profile(request,id):
     user_profile = Profile.objects.get(user = id)
     user_profile_messages = Meeting.objects.filter(user = id).all()
+    user_businesses = Business.objects.filter(user = id).all()
 
     regform = RegisterBusinessForm()
 
@@ -129,6 +130,7 @@ def my_profile(request,id):
         'ed_form':form,
         "reg_form":regform,
         "current_user":current_user,
+        "businesses":user_businesses,
     }
 
     return render(request,'profile/profile.html',context)
