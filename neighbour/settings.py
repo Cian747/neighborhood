@@ -20,7 +20,7 @@ MODE = config("MODE",default="dev")
 SECRET_KEY=config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
-# DEBUG = True
+DEBUG = True
 
 # ALLOWED_HOSTS = []
 

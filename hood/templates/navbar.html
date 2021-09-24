@@ -28,12 +28,12 @@
             <li class="active"><a href="/home">Home</a></li>
             <li><a class="drop" href="#">Pages</a>
               <ul>
-                <li><a href="pages/gallery.html">Gallery</a></li>
+                <!-- <li><a class="" href="pages/gallery.html">Gallery</a></li>
                 <li><a href="pages/full-width.html">Full Width</a></li>
-                <!-- <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+               <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
               <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
               <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-              <li><a href="pages/font-icons.html">Font Icons</a></li> -->
+              <li><a href="pages/font-icons.html">Font Icons</a></li> --> 
               </ul>
             </li>
             {% if user.is_authenticated %}
@@ -52,7 +52,7 @@
             </li>
             {% endif %}
             <li>
-            <form action="{% url 'search_business' %}" role="search" class="search d-flex">
+            <form action="{% url 'search_business' %}" role="search" class="search d-flex bg-transparent text-black-50">
               {% csrf_token %}
               <input class="search-field" type="search" name="business" placeholder="Search">
               <button type="submit" class="btn btn-default">

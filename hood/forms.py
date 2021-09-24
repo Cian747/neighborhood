@@ -31,9 +31,10 @@ class EditProfileForm(forms.ModelForm):
 class RegisterBusinessForm(forms.ModelForm):
     class Meta:
         model = Business
-        fields = ['name','neighbor','description','business_email']
+        fields = ['name','neighbor','description','business_email','image']
 
         widgets = {
+            'image':forms.FileInput(attrs={'class':'form-control'}),
             'name':forms.TextInput(attrs={'class':'form-control','placeholder':'Business name...'}),
             'description': forms.Textarea(attrs={'class':'form-control','placeholder':'Business description...'}),
             'neighbor':forms.Select(attrs={'class': 'form-control'}),
@@ -61,6 +62,3 @@ class PostMessageForm(forms.ModelForm):
             'content':forms.Textarea(attrs={'class':'form-control','placeholder':'Write a message...'}),
         }
 
-class NewsLetterForm(forms.Form):
-    your_name = forms.CharField(label='First Name',max_length=30)
-    email = forms.EmailField(label='Email')
