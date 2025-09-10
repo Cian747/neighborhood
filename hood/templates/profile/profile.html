@@ -18,9 +18,9 @@
             <p class="mb-0"><strong class="pr-1">Email:</strong></p>
             {% if request.user.id == profile.user.id %}
             <a class="btn btn-outline-secondary" href="{% url 'edit_profile' profile.pk %}">Edit profile</a>
+            {% else %}
             <a name="" id="" class="btn btn-dark" href="#" role="button" data-bs-toggle="modal"
               data-bs-target="#Modal">Register your business</a>
-            {% else %}
             <p class="lead"> Reach out to me for a collaboration </p>
             {% endif %}
           </div>

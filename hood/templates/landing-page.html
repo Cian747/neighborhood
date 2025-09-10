@@ -1,0 +1,13 @@
+<!-- Landing/Greeting page -->
+{% extends "base2.html" %}
+{% block title %}Welcome | Neighborhood Hub{% endblock %}
+{% block content %}
+<div class="text-center py-20">
+  <h2 class="text-4xl font-bold text-gray-900 mb-4">Stay Connected with Your Neighborhood</h2>
+  <p class="text-gray-600 mb-6">Get the latest news, discover local businesses, and stay updated on community events.</p>
+  <div class="space-x-4">
+    <a href="{% url 'signup' %}" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">Sign Up</a>
+    <a href="{% url 'login' %}" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg shadow hover:bg-gray-300">Login</a>
+  </div>
+</div>
+{% endblock %}

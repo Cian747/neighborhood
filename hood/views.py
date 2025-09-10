@@ -19,6 +19,7 @@ def register_user(request):
         if rgf.is_valid():
             rgf.save()
             user = rgf.cleaned_data.get('username')
+            print(user)
             email = rgf.cleaned_data.get('email')
             # send_welcome_email(user,email)
             user_profile = Profile.objects.get(user = request.user)
@@ -29,6 +30,41 @@ def register_user(request):
 
     
     return render(request, 'registration/registration.html', {'rgf': rgf})
+
+# Define a view function for the registration page
+def register_page(request):
+    # Check if the HTTP request method is POST (form submission)
+    if request.method == 'POST':
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        # Check if a user with the provided username already exists
+        user = User.objects.filter(username=username)
+        
+        if user.exists():
+            # Display an information message if the username is taken
+            messages.info(request, "Username already taken!")
+            return redirect('/register/')
+        
+        # Create a new User object with the provided information
+        user = User.objects.create_user(
+            first_name=first_name,
+            last_name=last_name,
+            username=username
+        )
+        
+        # Set the user's password and save the user object
+        user.set_password(password)
+        user.save()
+        
+        # Display an information message indicating successful account creation
+        messages.info(request, "Account created Successfully!")
+        return redirect('login_user')
+    
+    # Render the registration page template (GET request)
+    return render(request, 'registration/registration2.html')
 
 def login_user(request):
     if request.method == 'POST':
