@@ -3,6 +3,7 @@ from django.views.generic import ListView,DetailView,CreateView,UpdateView,Delet
 from .forms import RegistrationForm,EditProfileForm,RegisterBusinessForm,EditBusinessForm,PostMessageForm
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy,reverse
 from django.contrib.auth.models import User
@@ -11,6 +12,12 @@ from .models import Profile,Neighborhood,Business,Meeting
 
 
 # Create your views here.
+
+def landing_page(request):
+    '''
+    This is just for the welcome page
+    '''
+    return render(request,'landing-page.html')
 
 def register_user(request):
     rgf =RegistrationForm()
@@ -78,7 +85,7 @@ def login_user(request):
             login(request, user)
             return redirect('home')
 
-    return render(request, 'registration/login.html')
+    return render(request, 'registration/login2.html')
     
 def logout_user(request):
     logout(request)
