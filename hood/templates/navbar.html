@@ -1,66 +1,21 @@
-<div class="wrapper overlay row0">
-    <div id="topbar" class="hoc clear">
-      <div class="fl_left">
-        <ul class="nospace">
-          <li><i class="far fa-envelope"></i> {{ profile.family_email }}</li>
-        </ul>
+<header class="bg-white shadow-sm">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 text-primary-600">
+          <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+          </svg>
+        </div>
+        <h1 class="text-xl font-bold text-gray-800">NeighborHub</h1>
       </div>
-      <div class="fl_right">
-        <ul class="nospace">
-          <li><a href="/home"><i class="fas fa-home"></i></a></li>
-          <li><a href="#" title="Help Centre"><i class="far fa-life-ring"></i></a></li>
-          <li><a href="{% url 'login_user' %}" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
-          <li><a href="/register" title="Sign Up"><i class="fas fa-edit"></i></a></li>
-        </ul>
-      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a class="text-gray-600 hover:text-primary-600" href="#">About</a>
+        <a class="text-gray-600 hover:text-primary-600" href="#">Events</a>
+        <a class="text-gray-600 hover:text-primary-600" href="#">Directory</a>
+        <a class="text-gray-600 hover:text-primary-600" href="#">Contact</a>
+      </nav>
     </div>
   </div>
 
-
-  <div class="bgded" style="background-color: cornsilk;">
-    <div class="wrapper row1">
-      <header id="header" class="hoc clear">
-        <div id="logo" class="fl_left">
-          <h1 class="logoname"><a href="/home">Block<span>Chain</span></a></h1>
-        </div>
-        <nav id="mainav" class="fl_right">
-          <ul class="clear">
-            <li class="active"><a href="/home">Home</a></li>
-            <li><a class="drop" href="#">Pages</a>
-              <ul>
-                <!-- <li><a class="" href="pages/gallery.html">Gallery</a></li>
-                <li><a href="pages/full-width.html">Full Width</a></li>
-               <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-              <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-              <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-              <li><a href="pages/font-icons.html">Font Icons</a></li> --> 
-              </ul>
-            </li>
-            {% if user.is_authenticated %}
-            <li><a class="drop">{{ user.username }}</a>
-              <ul>
-                <li><a href="{% url 'profile' user.profile.id %}">Visit Profile</a></li>
-                <li><a class="drop" href="#">Level 2 + Drop</a>
-                  <ul>
-                    <li><a href="#">Level 3</a></li>
-                    <li><a href="#">Level 3</a></li>
-                    <li><a href="#">Level 3</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Level 2</a></li>
-              </ul>
-            </li>
-            {% endif %}
-            <li>
-            <form action="{% url 'search_business' %}" role="search" class="search d-flex bg-transparent text-black-50">
-              {% csrf_token %}
-              <input class="search-field" type="search" name="business" placeholder="Search">
-              <button type="submit" class="btn btn-default">
-                <i class="fas fa-search"></i>     
-              </button>
-            </form> 
-            </li>   
-            </ul>
-        </nav>
-      </header>
-    </div>
+</header>

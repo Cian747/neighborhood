@@ -38,7 +38,6 @@ class Neighborhood(models.Model):
     def __str__(self) -> str:
        return self.neighborhood_name
 
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     family_name = models.CharField(max_length=50,null=True,blank=True)
@@ -96,7 +95,6 @@ class Meeting(models.Model):
 
     def __str__(self) -> str:
         return self.user.username
-
 
 class Business(models.Model):
     name = models.CharField(max_length=50)

@@ -19,6 +19,17 @@ def landing_page(request):
     '''
     return render(request,'landing-page.html')
 
+@login_required
+def dashboard(request):
+    neighborhoods= Neighborhood.objects.order_by("created_at")
+    meetings = Meeting.objects.order_by("created_at")
+    businesses = Business.objects.order_by("id")
+    return render(request, "dashboard.html", {
+        "news": neighborhoods,
+        "events": meetings,
+        "businesses": businesses
+    })
+
 def register_user(request):
     rgf =RegistrationForm()
     if request.method == 'POST':

@@ -1,0 +1,314 @@
+{% extends "base2.html" %}
+{% block title %}Dashboard | Neighborhood Hub{% endblock %}
+{% block content %}
+<html>
+
+<head>
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <title>Stitch Design</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+        --primary-color: #1193d4;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="relative flex h-auto min-h-screen w-full flex-col bg-slate-50 group/design-root overflow-x-hidden"
+    style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <div class="flex flex-1">
+        <aside class="flex flex-col w-64 bg-white border-r border-gray-200 p-6 shrink-0">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-[var(--primary-color)] flex items-center justify-center text-white font-bold text-lg">
+                N
+              </div>
+              <div>
+                <h1 class="text-gray-800 text-lg font-bold">Neighborhood</h1>
+                <p class="text-gray-500 text-sm">Welcome, Alex!</p>
+              </div>
+            </div>
+            <nav class="flex flex-col gap-2">
+              <a class="flex items-center gap-3 px-4 py-2 rounded-md bg-blue-100 text-[var(--primary-color)] font-medium"
+                href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z">
+                  </path>
+                </svg>
+                <span>Home</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100" href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM72.28,194.52a64,64,0,0,1,111.44,0,87.83,87.83,0,0,1-111.44,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.78,66.15a72,72,0,0,0-131.56,0,88,88,0,1,1,131.56,0Z">
+                  </path>
+                </svg>
+                <span>Profile</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100" href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M88,112a8,8,0,0,1,8-8h80a8,8,0,0,1,0,16H96A8,8,0,0,1,88,112Zm8,40h80a8,8,0,0,0,0-16H96a8,8,0,0,0,0,16ZM232,64V184a24,24,0,0,1-24,24H32A24,24,0,0,1,8,184.11V88a8,8,0,0,1,16,0v96a8,8,0,0,0,16,0V64A16,16,0,0,1,56,48H216A16,16,0,0,1,232,64Zm-16,0H56V184a23.84,23.84,0,0,1-1.37,8H208a8,8,0,0,0,8-8Z">
+                  </path>
+                </svg>
+                <span>News</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100" href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z">
+                  </path>
+                </svg>
+                <span>Events</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100" href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M232,96a7.89,7.89,0,0,0-.3-2.2L217.35,43.6A16.07,16.07,0,0,0,202,32H54A16.07,16.07,0,0,0,38.65,43.6L24.31,93.8A7.89,7.89,0,0,0,24,96v16a40,40,0,0,0,16,32v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V144a40,40,0,0,0,16-32ZM54,48H202l11.42,40H42.61Zm50,56h48v8a24,24,0,0,1-48,0Zm-16,0v8a24,24,0,0,1-48,0v-8ZM200,208H56V151.2a40.57,40.57,0,0,0,8,.8,40,40,0,0,0,32-16,40,40,0,0,0,64,0,40,40,0,0,0,32,16,40.57,40.57,0,0,0,8-.8Zm-8-72a24,24,0,0,1-24-24v-8h48v8A24,24,0,0,1,192,136Z">
+                  </path>
+                </svg>
+                <span>Businesses</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100" href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z">
+                  </path>
+                </svg>
+                <span>Groups</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+        <main class="flex-1 p-8 overflow-y-auto">
+          <div class="flex items-center justify-between mb-8">
+            <h1 class="text-4xl font-bold text-gray-800">Welcome to Your Neighborhood</h1>
+          </div>
+          <div class="relative mb-8">
+            <input
+              class="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+              placeholder="Search for news, events, or businesses..." type="text" />
+            <svg class="absolute left-4 top-1/2 -translate-y-1/2 h-6 w-6 text-gray-400" fill="none" height="24"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+              width="24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Discover Neighborhoods</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
+                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
+                  <svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"></path>
+                  </svg>
+                </div>
+                <h3 class="font-semibold text-gray-800">Willow Creek</h3>
+                <p class="text-sm text-gray-500">12 Active Members</p>
+              </a>
+              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
+                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-green-100 flex items-center justify-center">
+                  <svg class="h-8 w-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"></path>
+                  </svg>
+                </div>
+                <h3 class="font-semibold text-gray-800">Oakwood</h3>
+                <p class="text-sm text-gray-500">25 Active Members</p>
+              </a>
+              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
+                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="h-8 w-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"></path>
+                  </svg>
+                </div>
+                <h3 class="font-semibold text-gray-800">Maple Grove</h3>
+                <p class="text-sm text-gray-500">8 Active Members</p>
+              </a>
+              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
+                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-red-100 flex items-center justify-center">
+                  <svg class="h-8 w-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"></path>
+                  </svg>
+                </div>
+                <h3 class="font-semibold text-gray-800">Cedar Hills</h3>
+                <p class="text-sm text-gray-500">31 Active Members</p>
+              </a>
+            </div>
+          </div>
+          <div class="space-y-12">
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">Local News</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                  class="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkrYgRfwDSR9EGv8_RZIWbdU7H3ysoAZmiVxcoE5c2y6BrJwhSTU_ZzFecP6fMU5KCDn4oGusvuoOk2IT3yetkw-md4NGI9Meqj5NIvoCWzGPyd5qYSpzRLH0oFu0a2nHhnUiCaxmZCf6LGE33hOeO_2MQiha0xhffoQKP6XILG0f4eaQCSvDjZSgSlknrbOwDXPnaegXOgGTYqpSlvTlzbR2wHc5v5fZ3WvcA5p4HFOM5QBzTa2X_k-9D8UUzVio9ERlaMgYkuz5c");'>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Community Garden Expansion Approved</h3>
+                    <p class="text-gray-600">The city council has approved the expansion of the community garden, adding
+                      new plots and a children's area.</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvOLMK7P3mQ-VNIZGBCVKOsOg1nB22AbgOU46Q09g-S_mEx8v0HT411eU-CD2daYBdXjHc0bygTfrFMwMHk4YsjW5OfuybyaNIDpqzd5c-nA1Mc1I7H-fobXlOvJ5DXbGdbSGrG1AhCI5zaZnrRMLG3V_3lxznBuST3ajad0e03B4AfM6S6dCUm9vD-bcxEtN7a7rrHcLY-qqXhiD2qOrPtcF_cSHuvXaWvwsIoqXoPANIPr31KKozNxlZGeyLUuYPORcYrzpBs-j6");'>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Neighborhood Watch Meeting</h3>
+                    <p class="text-gray-600">Join us for our monthly neighborhood watch meeting to discuss safety and
+                      community initiatives.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Community Corner</h2>
+                <button
+                  class="flex items-center gap-2 px-4 py-2 bg-[var(--primary-color)] text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z">
+                    </path>
+                  </svg>
+                  <span>Create Post</span>
+                </button>
+              </div>
+              <p class="text-gray-600 mb-6">Share your stories, announcements, or items for sale with the community.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-md p-4 shadow-sm">
+                  <div class="flex items-start gap-3">
+                    <img alt="User avatar" class="w-10 h-10 rounded-full"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFrD6W76xb7PH7x6SyAWKEll1f5i_71H5samZw_9UcbKw9DK5uTo7mxtpkh8TTvGlheB3ymTB0Y-NCC9qmZBi9S509SZe7uqMSPGZkxCMMt_iW5S58WFfgOXHp3Pe2c8FQduBg-DyEq4hQppt29JZRlr486XgsykVwSKCpVg0GE8ylNGdteeAnYli4SO5w9JqytbfrYgzAi1fAzGC2h8oOU-tYz6AX26hKbq_u3jarbkJ_YzglxNfmLAXe43EGOE2fjZlvHecfZfxQ" />
+                    <div>
+                      <p class="font-semibold text-gray-800">John Doe</p>
+                      <p class="text-xs text-gray-500">2 hours ago</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 mt-3">Looking for a reliable babysitter for Friday nights. Please message me
+                    if you're interested!</p>
+                </div>
+                <div class="bg-white rounded-md p-4 shadow-sm">
+                  <div class="flex items-start gap-3">
+                    <img alt="User avatar" class="w-10 h-10 rounded-full"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjnJIrfUlJD9pf8gVRmMxF7pPAIc_0aoSjcwT1mzQLyHUh3XwdJ3x70QkPCmsI1wZTLDnI8JtEABAfl3OBJUtZglB6fb4r-mI6omG0Gy-7ul72-SV6TYuN_NCRKimXbqX9ssgiQ2FbskaqhLtpm1NQSkvn2SQvhperyo5G0NuoozteM16PH7-aEOk_VQ108xAXW2EsAqFIF94jpru9GjbkRM3-SZWbO4gIeVZ83ROEZ0BrlDYu8Su8XPQxMnql1Eo2VMjGj-5CVxNy" />
+                    <div>
+                      <p class="font-semibold text-gray-800">Jane Smith</p>
+                      <p class="text-xs text-gray-500">5 hours ago</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 mt-3">Lost cat in the vicinity of Oak Street. He's a ginger tabby named
+                    Whiskers. Reward offered!</p>
+                </div>
+                <div class="bg-white rounded-md p-4 shadow-sm">
+                  <div class="flex items-start gap-3">
+                    <img alt="User avatar" class="w-10 h-10 rounded-full"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb1D3FfqxuvqMJS9Srvhq-IxUXCSqFp6rrfmu2qvGh4edx2-9DivO54OKFFR4sGXrxDMZptEY6B4EnwSCwzU5GNjo1Cuo8xX1t9puSuawh6QIg__20vM9Y1JL9uLG4G7UZ2F_adW0op1AIB8gZCsckwkXg13N4exhlw5F_UlgeCTqr6zfw1H-R4UElZX_irNItae5jE7WxJBPZC0d8m-3BrQQG6gd8IwQiIJiT6lwwalnnVHzYayHxY0j55mPeC3gyaUqOfReciCBy" />
+                    <div>
+                      <p class="font-semibold text-gray-800">Community Center</p>
+                      <p class="text-xs text-gray-500">1 day ago</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 mt-3">Don't forget the annual bake sale this Saturday! All proceeds go to the
+                    park renovation fund.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">Upcoming Events</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                  class="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARK0Uia8ekMGHVkyU09IN3UnKOVGdEu1FVFqfWp3-8kq-U4rLg4GzLPCArrkhyEfcQUOGyYB0A01sLQUIuyLY_TtcUWU4XSmG9-I0Xyh-Xy4MZFoU7x8eJU-7a5Ciw7ppYvqcNkR56x3645tDD_QRMq_OkUi4-brkImjTMnsaZ2__3d_9GdYqMsjEDfJXUH9Jf4ufHJTu7Ax7BHx4q5DZpwSw0CXq2pJ8NhyWj8mTEk7b1vE1tuj5U06Ps-TdoPr60D8_nxPIM0YeY");'>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Summer Block Party</h3>
+                    <p class="text-gray-600">Get ready for our annual summer block party with food, music, and fun for
+                      all ages!</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmPTPXOHg-2tm_j1EFEylSSB1ArdHk9XP2BC29iiugssdtisKrqMDy7tUx8B6hSjSOi2LeoH9aw3Z6szhadwVJgJvqBKbgCaMkSFgbK6bclurxQDJ0e2cXpzSwkIVSaxlfh7ciIPsaJLAfw2VyZRDYiNIWW3iRMnGegWzGc41qNvcjwMXs9lcWZfLlopTygYlPIyd_qJV7YqzpLKc3w4pXiNhWarLjLwX8TrZz53iJNDA72xKbG9JA-q01H18TysxPrN3IX8kuLcIJL");'>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Farmers Market</h3>
+                    <p class="text-gray-600">Support local farmers and artisans at our weekly farmers market.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">Local Businesses</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                  class="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANeKKjX_Bu9RI0PxVaN4RUgztWLQXhuQ2DzlcxyrC71Dm2XXWzHkZmyoa9NEY-Rxg6K5JIQJiSwc02KIkJ_PI0kDTfShXZ3ZbgaXjQcj9ORTrALOxmJUT7dF68Au_VFZYM9c3ASrmDhCmkZeWmJRNZXLR6KgsQpfRjtiqU6qPvaWGzI9u4cDF2KWcwIxxizaSHyJ-5JxxBbTMQhqFial5BW0vdH-8g-wan-rRs40D1MSQmXJArvms0kZwzES_wUBGh6hFrIyKEWKTr");'>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">The Corner Cafe</h3>
+                    <p class="text-gray-600">Your local spot for coffee, pastries, and community gatherings.</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-white rounded-md overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCa54MLVnuWbJYnQXWH8b1kqqV8MouwvwUSXkHGyJYyNpIfbWW_lzl0wNGFJnecsvIeExYxGs8aj6gHSdbSlrBzBtryZ4T38T9BM5IVa9NDheRQ3c8izJhbzKzVR8k0K2N1Pnja6gmP3t-4c2qltZtFFMe9fH8s5RAoQGtC9tBG3x_Wp8Y_psG6HCdvu0bwDB4x4c4Qum12zlaPIKwQbuYXGWXzM6SB-CS6Dq5BYotdQc-pcrpTse8wbIFVl-y1wTtn4nENsSrxFBlL");'>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Green Grocer</h3>
+                    <p class="text-gray-600">Fresh produce and groceries from local suppliers.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+{% endblock %}
+
+
+{% comment %} {% url 'create_post' %} {% endcomment %}
