@@ -1,0 +1,183 @@
+{% extends 'base2.html' %}
+
+
+{% block content %}
+<main class="container mx-auto px-4 py-8 md:py-12">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 md:mb-12">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <h1 class="text-3xl md:text-4xl font-bold text-secondary-900 tracking-tight">Upcoming Events</h1>
+                <p class="text-secondary-600 mt-2 text-lg">Explore events happening in our neighborhood</p>
+            </div>
+            <a class="inline-flex items-center justify-center gap-2 rounded-md bg-primary-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                href="#">
+                <span class="material-symbols-outlined text-base">add</span>
+                Add New Event
+            </a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-8 md:mb-12">
+            <div class="relative">
+                <select
+                    class="appearance-none w-40 cursor-pointer rounded-lg bg-white py-2 pl-4 pr-10 text-sm font-medium text-secondary-700 border border-secondary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                    <option>Date</option>
+                    <option>Today</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                </select>
+                <span
+                    class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-secondary-500 pointer-events-none">expand_more</span>
+            </div>
+            <div class="relative">
+                <select
+                    class="appearance-none w-40 cursor-pointer rounded-lg bg-white py-2 pl-4 pr-10 text-sm font-medium text-secondary-700 border border-secondary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                    <option>Category</option>
+                    <option>Community</option>
+                    <option>Arts &amp; Culture</option>
+                    <option>Workshops</option>
+                    <option>Food &amp; Drink</option>
+                </select>
+                <span
+                    class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-secondary-500 pointer-events-none">expand_more</span>
+            </div>
+            <div class="relative">
+                <select
+                    class="appearance-none w-40 cursor-pointer rounded-lg bg-white py-2 pl-4 pr-10 text-sm font-medium text-secondary-700 border border-secondary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                    <option>Location</option>
+                    <option>Central Park</option>
+                    <option>Community Center</option>
+                    <option>Town Square</option>
+                </select>
+                <span
+                    class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-secondary-500 pointer-events-none">expand_more</span>
+            </div>
+        </div>
+        <div class="space-y-8">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:shrink-0">
+                        <img alt="Community Cleanup Day" class="h-48 w-full object-cover md:h-full md:w-56"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMexZn1yQURKf9WmijnHsmeTSg5ZQUgolsKS5_bltS2mh0rcONVVzFwEtfWEZ1_BhvuF0XuMJehF54eZ9dSOaHgFgnPVwtBf4jb2dwzZDa0Il2fXgNQkoCF_hPLUaApnrneZbmMkAyJwBGCwbwEAvAzni8_Lt8lu9nF9O3ujJBfbHPbC6yAsZE2XZELY5sIMnxFAgXm9m5wDyGgGSNslpU4rZBY0tKMk9bRbws7EB6qObMC7nIT8WVndZxiWCa6SFN1YaOvbeeCWJ7" />
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="uppercase tracking-wide text-sm text-primary-600 font-semibold">Sat, Oct 26 ⋅
+                                10:00 AM</div>
+                            <a class="block mt-1 text-lg leading-tight font-bold text-secondary-900 hover:underline"
+                                href="#">Community Cleanup Day</a>
+                            <p class="mt-2 text-secondary-600">Join us for a day of cleaning up our local park. Gloves
+                                and bags will be provided.</p>
+                        </div>
+                        <div class="mt-4">
+                            <a class="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                                href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:shrink-0">
+                        <img alt="Neighborhood Picnic" class="h-48 w-full object-cover md:h-full md:w-56"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV6TFmmVtVW84r5qKRsoftsLKETud842ALUFh5GXdkQqE7eTVZVQnqT2y_vIl_XXfBbssDo_Tot7Lo9-FruBjE14Q75PaZXkVbceEoCXhc-dcRtHHsO6EDMqb8HzowVmQViu7EvxBU17Khcbtq1GCOJFrxJeIVR_HIR09JYf2873D1ZcfpW_o_-qsq9tNgoiMUvp3hr5TeO5cZCc_fTD1-YEdNARqC50KMuD7rLJKKjw8kN4s1kJJACn9dIkSvtcDPvaplCK6WNKlo" />
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="uppercase tracking-wide text-sm text-primary-600 font-semibold">Sun, Nov 3 ⋅
+                                1:00 PM</div>
+                            <a class="block mt-1 text-lg leading-tight font-bold text-secondary-900 hover:underline"
+                                href="#">Neighborhood Picnic</a>
+                            <p class="mt-2 text-secondary-600">Bring your favorite dish and enjoy a picnic with your
+                                neighbors at Central Park.</p>
+                        </div>
+                        <div class="mt-4">
+                            <a class="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                                href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:shrink-0">
+                        <img alt="Book Exchange" class="h-48 w-full object-cover md:h-full md:w-56"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7no34fBcgd33TsZdG0KGMRXTNthna6NbRDl6mj8CQCS4KevXYnXZlerECGvIu-aILayVJgmoeReyxrviwBzkA9VglY4GKWbzr7-r77UeSzD2FECPqlzLU5e3ClmpxorxdtsqJkbGYxt7iAol2abr_-sQ6wilFxTk03gwu-i6oQEG5Pyq4u5GQEBnNsYSMrJF9Cl7PqaSUPWJO0x4IhIFMmX1JSpBLQ9WOv7lmitc3aRNVqfImLoRBhFWxZ4zgUgCHFOaYyKQtwiOr" />
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="uppercase tracking-wide text-sm text-primary-600 font-semibold">Wed, Nov 13 ⋅
+                                6:30 PM</div>
+                            <a class="block mt-1 text-lg leading-tight font-bold text-secondary-900 hover:underline"
+                                href="#">Book Exchange</a>
+                            <p class="mt-2 text-secondary-600">Swap books with fellow book lovers at the community
+                                center. All genres welcome.</p>
+                        </div>
+                        <div class="mt-4">
+                            <a class="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                                href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:shrink-0">
+                        <img alt="Local Art Fair" class="h-48 w-full object-cover md:h-full md:w-56"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCbLIx-fI0d5AXRCKVYDaFnnwQDWfj00bFwVF8Mxg58VDdrBk-QZKL04uWL3AutfLK9_eWBRljixRRuSOEeOjygkweG922ulq1LJ7X4wxQ2hqwicAwrxERntmD5z6MuhSfOA_HW1L1sll71mkx8ujkXVmL6lD1PUKodo1Lo-0xL2eSmJushQsS6RsYXxEcN5-V_shLFlXkncsansxnb_6OLdTJKZQ8aH71WQijnnQzFtZ8yqbY1c4A-ZvjGlTLWnXlyjzqhTPUh-Nl" />
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="uppercase tracking-wide text-sm text-primary-600 font-semibold">Sat, Nov 23 ⋅
+                                11:00 AM - 5:00 PM</div>
+                            <a class="block mt-1 text-lg leading-tight font-bold text-secondary-900 hover:underline"
+                                href="#">Local Art Fair</a>
+                            <p class="mt-2 text-secondary-600">Discover local artists and their work at the annual art
+                                fair in the town square.</p>
+                        </div>
+                        <div class="mt-4">
+                            <a class="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                                href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:shrink-0">
+                        <img alt="Community Garden Workshop" class="h-48 w-full object-cover md:h-full md:w-56"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyZXAUXNALO0KiX7rVv7y4nOhZPHjoosWNnb3pqzu8x53IruLXNKZNfjBloJoiC_RYmxjY4tnLucB8sbk-QFI_pHm6WGJiPowA89tjbJsa0fgPQjJnsG1-1g-7niv2HhJzWewB24sSTqLCdELE-f3flDcIHlxjKRJIY6oFLfH8CqTZDTwmxeK9uUYMY1idheRVFJ-p9FVPzIeZwwNxsL9PZSCP0uYR6poOB2OmJ68LrsbLj0ybwWH6iZ6LopO8SLJwxYAO2uUFleC7" />
+                    </div>
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="uppercase tracking-wide text-sm text-primary-600 font-semibold">Sun, Dec 1 ⋅
+                                2:00 PM</div>
+                            <a class="block mt-1 text-lg leading-tight font-bold text-secondary-900 hover:underline"
+                                href="#">Community Garden Workshop</a>
+                            <p class="mt-2 text-secondary-600">Learn about sustainable gardening practices and help
+                                maintain our community garden.</p>
+                        </div>
+                        <div class="mt-4">
+                            <a class="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                                href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

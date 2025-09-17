@@ -1,13 +1,178 @@
 <!-- Landing/Greeting page -->
-{% extends "base2.html" %}
+{% comment %} {% extends "base2.html" %}
 {% block title %}Welcome | Neighborhood Hub{% endblock %}
 {% block content %}
 <div class="text-center py-20">
   <h2 class="text-4xl font-bold text-gray-900 mb-4">Stay Connected with Your Neighborhood</h2>
-  <p class="text-gray-600 mb-6">Get the latest news, discover local businesses, and stay updated on community events.</p>
+  <p class="text-gray-600 mb-6">Get the latest news, discover local businesses, and stay updated on community events.
+  </p>
   <div class="space-x-4">
-    <a href="{% url 'register' %}" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">Sign Up</a>
-    <a href="{% url 'login_user' %}" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg shadow hover:bg-gray-300">Login</a>
+    <a href="{% url 'register' %}" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">Sign
+      Up</a>
+    <a href="{% url 'login_user' %}"
+      class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg shadow hover:bg-gray-300">Login</a>
   </div>
 </div>
+{% endblock %} {% endcomment %}
+
+
+{% block content %}
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans:wght@400;500;700;900"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Welcome | Neighborhood Hub</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #0ea5e9;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+        --primary-950: #082f49;
+      }
+    </style>
+</head>
+
+<body class="bg-slate-50" style='font-family: "Public Sans", sans-serif;'>
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <header class="sticky top-0 z-20 w-full bg-slate-50/80 backdrop-blur-sm">
+      <div class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
+        <a class="flex items-center gap-3 text-slate-900" href="#">
+          <svg class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+          </svg>
+          <span class="text-2xl font-bold tracking-tight">NeighborHub</span>
+        </a>
+        <nav class="hidden items-center gap-8 lg:flex">
+          <a class="text-base font-medium text-slate-700 hover:text-primary-600 transition-colors" href="#">About</a>
+          <a class="text-base font-medium text-slate-700 hover:text-primary-600 transition-colors" href="#">Events</a>
+          <a class="text-base font-medium text-slate-700 hover:text-primary-600 transition-colors" href="#">Groups</a>
+          <a class="text-base font-medium text-slate-700 hover:text-primary-600 transition-colors"
+            href="#">Resources</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a class="hidden sm:inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-primary-100 text-primary-700 text-sm font-bold leading-normal tracking-wide hover:bg-primary-200 transition-colors"
+            href="{% url 'login_user' %}">
+            Log In
+          </a>
+          <a class="inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-primary-600 text-black text-sm font-bold leading-normal tracking-wide shadow-md hover:bg-primary-700 transition-all"
+            href="{% url 'register' %}">
+            Sign Up
+          </a>
+          <button class="lg:hidden p-2 rounded-md hover:bg-slate-200">
+            <span class="material-symbols-outlined text-slate-700">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <section class="relative">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="flex min-h-[60vh] md:min-h-[70vh] items-center justify-center text-center">
+            <div class="max-w-3xl py-16 text-white flex flex-col items-center">
+              <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">
+                Connect with Your Community
+              </h1>
+              <p class="mt-6 text-lg sm:text-xl font-light max-w-2xl">
+                Discover local events, share resources, and build a stronger, more vibrant neighborhood together.
+              </p>
+              <div class="mt-10 flex flex-wrap gap-4 justify-center">
+                <a class="inline-flex items-center justify-center rounded-md h-12 px-6 bg-primary-600 text-white text-lg font-bold shadow-lg hover:bg-primary-700 transition-transform hover:scale-105"
+                  href="#">
+                  Get Started
+                </a>
+                <a class="inline-flex items-center justify-center rounded-md h-12 px-6 bg-white text-black text-primary-700 text-lg font-bold shadow-lg hover:bg-primary-50 transition-transform hover:scale-105"
+                  href="#">
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-0 -z-10 h-full w-full bg-cover bg-center"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7RhXxIB6IZz7F66LHZ6w1X_gKdUyXAut-oHa73KohYbpwt3gp57YnBWjbcmig6a9Pfr1olJec0yhu7Hrz9EUmEfDf2aMASGndZ9p-fwlwwcYzKdKKTAUdTzOX1BHbB7wknGp-DTVjvx6BjsA0_pvyVrt8NcMctY4VJcxpm0uWsj8zHXCD2ODEaB08FJdEDixGVmGsiXRHRaTsr-gx3ITYjWPRZwhLeWeX4x3OKxJt_yd8irvL7l33AIJ68v6nZKt5gYACZNvbgy5V");'>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-900 tracking-tight">What You Can Do</h2>
+            <p class="mt-4 text-lg text-slate-600">
+              NeighborHub offers a variety of features to help you connect with your community and make your
+              neighborhood a better place to live.
+            </p>
+          </div>
+          <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col items-center text-center p-6 bg-slate-50 rounded-lg shadow-sm">
+              <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600">
+                <span class="material-symbols-outlined text-4xl">event</span>
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-slate-900">Discover Local Events</h3>
+              <p class="mt-2 text-base text-slate-600">
+                Find out about upcoming events in your neighborhood, from block parties to community meetings and
+                workshops.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center p-6 bg-slate-50 rounded-lg shadow-sm">
+              <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600">
+                <span class="material-symbols-outlined text-4xl">groups</span>
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-slate-900">Join Groups &amp; Connect</h3>
+              <p class="mt-2 text-base text-slate-600">
+                Join groups based on your interests, connect with like-minded neighbors, and participate in local
+                discussions.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center p-6 bg-slate-50 rounded-lg shadow-sm">
+              <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600">
+                <span class="material-symbols-outlined text-4xl">campaign</span>
+              </div>
+              <h3 class="mt-6 text-xl font-bold text-slate-900">Share News &amp; Updates</h3>
+              <p class="mt-2 text-base text-slate-600">
+                Stay informed about important local news, share updates with your neighbors, and engage in community
+                conversations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-slate-800 text-slate-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+          <div class="flex items-center gap-3">
+            <svg class="h-7 w-7 text-primary-500" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+            </svg>
+            <span class="text-xl font-bold text-white">NeighborHub</span>
+          </div>
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <a class="text-base font-medium hover:text-white transition-colors" href="#">Terms of Service</a>
+            <a class="text-base font-medium hover:text-white transition-colors" href="#">Privacy Policy</a>
+            <a class="text-base font-medium hover:text-white transition-colors" href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-slate-700 pt-8 text-center text-base text-slate-400">
+          <p>© 2024 NeighborHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
 {% endblock %}

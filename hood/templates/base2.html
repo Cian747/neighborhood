@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>{% block title %}Neighborhood Hub{% endblock %}</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>{% block title %}NeighborHub{% endblock %}</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&amp;family=Roboto:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+        --primary-color: #1193d4;
+        --secondary-color: #f0f7ff;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6, .font-headline {
+        font-family: 'Newsreader', serif;
+      }
+    </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
   <!-- Top Navbar -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-indigo-600">Neighborhood Hub</h1>
+      <h1 class="text-xl font-bold text-indigo-600">NeighborHub</h1>
       {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}" class="text-sm text-red-500">Logout</a>
+      <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxpsGKdsf32ha3lt2vea9b4E6zN-cn32PgjJIahkZaYzkwtbRkNyvSFXLDDjPyl3UMC1fa8yyu787igDV889Vp4QqRrljZKp_ukHK3UWfj8v5LHEzw4B5RA5xVcz1ulX7FmDDJBJjSqlu1WxhyivzKCiQUU1lRo7u5fDVnUORwWeLLkL3bThA0C72DVe1rkUbmtFRiQjCctznnESvTy3elCuhLN2706KvFIRMZWOtUjFOwSsEMnoav-TwzwTF6EGwDpgVz3s0Xqwlj");'>
+      </div>
+      </button>
+      <a href="{% url 'logout' %}" class="text-sm text-red-500">Logout</a>
       {% else %}
-        <a href="{% url 'login' %}" class="text-sm text-indigo-600">Login</a>
+      <a href="{% url 'login_user' %}" class="text-sm text-indigo-600">Login</a>
       {% endif %}
     </div>
   </header>
@@ -43,4 +69,5 @@
   </nav>
   {% endif %}
 </body>
+
 </html>

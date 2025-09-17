@@ -1,21 +1,39 @@
 <header class="bg-white shadow-sm">
-  <div class="container mx-auto px-6 py-4">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 text-primary-600">
-          <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-          </svg>
-        </div>
-        <h1 class="text-xl font-bold text-gray-800">NeighborHub</h1>
-      </div>
+  <div class="container mx-auto flex h-20 items-center justify-between px-6">
+    <div class="flex items-center gap-6">
+      <a class="flex items-center gap-2 text-2xl font-bold text-text-primary" href="#">
+        <span class="material-symbols-outlined text-primary-color text-3xl">roofing</span>
+        <span class="font-headline">NeighborHub</span>
+      </a>
       <nav class="hidden md:flex items-center gap-6">
-        <a class="text-gray-600 hover:text-primary-600" href="#">About</a>
-        <a class="text-gray-600 hover:text-primary-600" href="#">Events</a>
-        <a class="text-gray-600 hover:text-primary-600" href="#">Directory</a>
-        <a class="text-gray-600 hover:text-primary-600" href="#">Contact</a>
+        <a class="text-base font-medium text-text-secondary hover:text-primary-color transition-colors"
+          href="#">Home</a>
+        <a class="text-base font-bold text-primary-color" href="#">Events</a>
+        <a class="text-base font-medium text-text-secondary hover:text-primary-color transition-colors"
+          href="#">Groups</a>
+        <a class="text-base font-medium text-text-secondary hover:text-primary-color transition-colors"
+          href="#">News</a>
+        <a class="text-base font-medium text-text-secondary hover:text-primary-color transition-colors"
+          href="#">Classifieds</a>
       </nav>
     </div>
+    <div class="flex items-center gap-4">
+      <div class="relative hidden sm:block">
+        <span
+          class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary">search</span>
+        <input
+          class="form-input w-full rounded-full border-gray-300 bg-gray-100 pl-10 pr-4 py-2 text-sm focus:border-primary-color focus:ring-primary-color"
+          placeholder="Search..." type="search" />
+      </div>
+      <button
+        class="relative rounded-full p-2 text-text-secondary hover:bg-gray-100 hover:text-primary-color transition-colors">
+        <span class="material-symbols-outlined">notifications</span>
+        <span class="absolute top-1 right-1 block h-2 w-2 rounded-full bg-red-500"></span>
+      </button>
+      <button>
+        <img alt="User avatar" class="h-10 w-10 rounded-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzB9MN7Nz0pHv4K9y5WqsZGSsy1Fx-iHMlrY8bcBLcXy2I9SqBy79XndnbDInU3_QshKHa6bRGNSg6zMkvMjBRKwepVkkFdttEjn9EKhfv7464ZbLvF8AtvTk_s1faGjyZa3Xh1ByG3N4GcKDdquQpCKyVLyvJwqBB8egGXzX6rmaCCeRyg9Nif67i6YS6OIdyyTgbJkpJm0DNWly6RO1lpjtNYjlqPjdReQ7FNd38axh_t48MrOlv6mHwT1KyHueBrMrjYSVpujMy" />
+      </button>
+    </div>
   </div>
-
 </header>

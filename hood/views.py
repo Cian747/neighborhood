@@ -124,6 +124,27 @@ def home(request):
 
     return render(request,'index.html',context)
 
+def neighbor_news(request):
+    '''
+    See neighborhub news
+    '''
+    return render(request,'hood_news.html')
+
+def neighbor_events(request):
+    '''
+    See neighborhub events
+    '''
+    return render(request,'hood_events.html')
+
+def create_hood(request):
+    '''
+    Registered Admins will be abale to create neighborhoods
+    '''
+
+    # if request.method == 'POST':
+
+    return render(request,'post_hood.html')
+
 class EditProfileView(UpdateView):
     model = Profile
     form_class = EditProfileForm
