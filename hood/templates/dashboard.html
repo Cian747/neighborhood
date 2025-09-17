@@ -113,58 +113,78 @@
           <div>
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Discover Neighborhoods</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
-                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
-                  <svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2"></path>
-                  </svg>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center flex flex-col justify-between">
+                <div>
+                  <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-blue-100 flex items-center justify-center">
+                    <svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"></path>
+                    </svg>
+                  </div>
+                  <h3 class="font-semibold text-gray-800">Willow Creek</h3>
+                  <p class="text-sm text-gray-500 mb-4">12 Active Members</p>
                 </div>
-                <h3 class="font-semibold text-gray-800">Willow Creek</h3>
-                <p class="text-sm text-gray-500">12 Active Members</p>
-              </a>
-              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
-                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-green-100 flex items-center justify-center">
-                  <svg class="h-8 w-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2"></path>
-                  </svg>
+                <button
+                  class="w-full px-4 py-2 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition-colors text-sm">Leave</button>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center flex flex-col justify-between">
+                <div>
+                  <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-green-100 flex items-center justify-center">
+                    <svg class="h-8 w-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"></path>
+                    </svg>
+                  </div>
+                  <h3 class="font-semibold text-gray-800">Oakwood</h3>
+                  <p class="text-sm text-gray-500 mb-4">25 Active Members</p>
                 </div>
-                <h3 class="font-semibold text-gray-800">Oakwood</h3>
-                <p class="text-sm text-gray-500">25 Active Members</p>
-              </a>
-              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
-                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-purple-100 flex items-center justify-center">
-                  <svg class="h-8 w-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2"></path>
-                  </svg>
+                <button
+                  class="w-full px-4 py-2 bg-[var(--primary-color)] text-white font-medium rounded-md hover:bg-blue-700 transition-colors text-sm">Join</button>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center flex flex-col justify-between">
+                <div>
+                  <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-purple-100 flex items-center justify-center">
+                    <svg class="h-8 w-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"></path>
+                    </svg>
+                  </div>
+                  <h3 class="font-semibold text-gray-800">Maple Grove</h3>
+                  <p class="text-sm text-gray-500 mb-4">8 Active Members</p>
                 </div>
-                <h3 class="font-semibold text-gray-800">Maple Grove</h3>
-                <p class="text-sm text-gray-500">8 Active Members</p>
-              </a>
-              <a class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center" href="#">
-                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-red-100 flex items-center justify-center">
-                  <svg class="h-8 w-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2"></path>
-                  </svg>
+                <button
+                  class="w-full px-4 py-2 bg-[var(--primary-color)] text-white font-medium rounded-md hover:bg-blue-700 transition-colors text-sm">Join</button>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center flex flex-col justify-between">
+                <div>
+                  <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg class="h-8 w-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"></path>
+                    </svg>
+                  </div>
+                  <h3 class="font-semibold text-gray-800">Cedar Hills</h3>
+                  <p class="text-sm text-gray-500 mb-4">31 Active Members</p>
                 </div>
-                <h3 class="font-semibold text-gray-800">Cedar Hills</h3>
-                <p class="text-sm text-gray-500">31 Active Members</p>
-              </a>
+                <button
+                  class="w-full px-4 py-2 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition-colors text-sm">Leave</button>
+              </div>
             </div>
           </div>
           <div class="space-y-12">

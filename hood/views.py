@@ -96,7 +96,7 @@ def login_user(request):
             login(request, user)
             return redirect('home')
 
-    return render(request, 'registration/login2.html')
+    return render(request, 'registration/register.html')
     
 def logout_user(request):
     logout(request)

@@ -1,0 +1,152 @@
+{% extends 'registration/base.html' %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #0ea5e9;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+        --primary-950: #082f49;
+      }
+      body {
+        font-family: 'Public Sans', sans-serif;
+      }
+    </style>
+</head>
+
+<body class="bg-primary-50">
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-white shadow-sm">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 text-primary-600">
+                            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xl font-bold text-gray-800">NeighborHub</h1>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-gray-600 hover:text-primary-600" href="#">About</a>
+                        <a class="text-gray-600 hover:text-primary-600" href="#">Events</a>
+                        <a class="text-gray-600 hover:text-primary-600" href="#">Directory</a>
+                        <a class="text-gray-600 hover:text-primary-600" href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow container mx-auto px-6 py-12">
+            <div class="flex flex-col lg:flex-row justify-center items-start gap-16">
+                <div class="w-full lg:w-1/2 bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2 text-center">Welcome to the NeighborHub!</h2>
+                    <p class="text-gray-600 mb-8 text-center">Create an account to connect with your neighbors.</p>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-medium mb-2" for="signup-name">Full Name</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                                id="signup-name" placeholder="Enter your full name" type="text" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-medium mb-2" for="signup-email">Email Address</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                                id="signup-email" placeholder="Enter your email" type="email" />
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2" for="signup-password">Password</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                                id="signup-password" placeholder="Create a password" type="password" />
+                        </div>
+                        <button
+                            class="w-full bg-primary-600 text-white py-3 px-4 rounded-md hover:bg-primary-700 font-bold text-lg transition duration-300"
+                            type="submit">Sign Up</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-1/2 bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2 text-center">Welcome Back!</h2>
+                    <p class="text-gray-600 mb-8 text-center">Log in to see what's new in your community.</p>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-medium mb-2" for="login-email">Email Address</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                                id="login-email" placeholder="Enter your email" type="email" />
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="block text-gray-700 font-medium" for="login-password">Password</label>
+                                <a class="text-sm text-primary-600 hover:underline" href="#">Forgot password?</a>
+                            </div>
+                            <input
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                                id="login-password" placeholder="Enter your password" type="password" />
+                        </div>
+                        <button
+                            class="w-full bg-primary-600 text-white py-3 px-4 rounded-md hover:bg-primary-700 font-bold text-lg transition duration-300"
+                            type="submit">Log In</button>
+                        <div class="mt-6 text-center">
+                            <p class="text-gray-600">or</p>
+                            <button
+                                class="w-full mt-4 bg-white border border-gray-300 text-gray-700 py-3 px-4 rounded-md hover:bg-gray-50 font-medium text-lg transition duration-300 flex items-center justify-center gap-2"
+                                type="button">
+                                <svg class="w-6 h-6" viewBox="0 0 48 48">
+                                    <path
+                                        d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"
+                                        fill="#FFC107"></path>
+                                    <path
+                                        d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"
+                                        fill="#FF3D00"></path>
+                                    <path
+                                        d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"
+                                        fill="#4CAF50"></path>
+                                    <path
+                                        d="M43.611 20.083H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C42.012 35.853 44 30.138 44 24c0-1.341-.138-2.65-.389-3.917z"
+                                        fill="#1976D2"></path>
+                                </svg>
+                                <span>Log in with Google</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-white mt-16">
+            <div class="container mx-auto px-6 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500">© 2024 NeighborHub. All rights reserved.</p>
+                    <div class="flex gap-4 mt-4 md:mt-0">
+                        <a class="text-gray-500 hover:text-primary-600" href="#">Privacy Policy</a>
+                        <a class="text-gray-500 hover:text-primary-600" href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+{% endblock %}

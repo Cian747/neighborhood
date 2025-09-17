@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html>
+
+<head>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B600%3B700%3B900"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body class="bg-slate-50">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+        style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 px-10 py-4">
+                <div class="flex items-center gap-3 text-slate-900">
+                    <svg class="size-7 text-slate-900" fill="none" viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                    </svg>
+                    <h2 class="text-slate-900 text-xl font-bold">NeighborHub</h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-slate-700 text-sm font-medium hover:text-slate-900" href="#">Home</a>
+                        <a class="text-slate-700 text-sm font-medium hover:text-slate-900" href="#">Events</a>
+                        <a class="text-slate-700 text-sm font-medium hover:text-slate-900" href="#">Groups</a>
+                        <a class="text-slate-700 text-sm font-medium hover:text-slate-900" href="#">Resources</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="flex h-10 w-10 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+                            <span class="material-symbols-outlined text-2xl"> notifications </span>
+                        </button>
+                        <button>
+                            <div class="h-10 w-10 rounded-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqR8o-gMWfBTlPi_6Cl5azL_fKD2twZWJNqcllNJMEm8hNXwihta1V_Tg8WLH8ZREHCu4w3RLQULy_fAi3_em8eSY7HEJSMQXlYQFxn7QledKUPoAM75Q7_ToBRLL6f4TPPFdTJJCYUqO-V2Jx6Z9pUSdrw-f5SjskUpnw9JZBtEjOQLYhre5822Df-cVwLXIo-ghJ5eIZ0k9oNynSBSKT0hN37h_wX8TKxW0bF6e_WBcL_vnUAHvNLBxWvc6roZcCi3wwK0G367EE");'>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1 px-4 py-8 sm:px-6 md:px-10">
+                <div class="mx-auto w-full max-w-2xl">
+                    <div class="mb-8 text-center">
+                        <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Create a New
+                            Neighborhood</h1>
+                        <p class="mt-2 text-base text-slate-600">Define the details for your new community space.</p>
+                    </div>
+                    <form class="space-y-8">
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-700" for="neighborhood-name">Neighborhood
+                                Name</label>
+                            <input
+                                class="form-input w-full rounded-md border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-[#1193d4] focus:ring-[#1193d4]"
+                                id="neighborhood-name" placeholder="e.g., Sunnyvale Estates" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-700" for="description">Description</label>
+                            <textarea
+                                class="form-textarea w-full rounded-md border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:border-[#1193d4] focus:ring-[#1193d4]"
+                                id="description" placeholder="A brief summary of what makes this neighborhood special."
+                                rows="4"></textarea>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-semibold text-slate-800">Boundaries</h3>
+                            <p class="text-sm text-slate-600 mb-4">Define the geographical area of the neighborhood.</p>
+                            <div class="aspect-video w-full rounded-lg bg-cover bg-center object-cover"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfDjAaA_EU2kbmQvlyESQ6P2iGjVodjVedfggwMU048y0JIz62SBDG3jYin0s0uPMC95XblU64UB2qh-C0gebE_X5-uGv3Vucv54RYjhIk1rgmHmBpmqn_Sxy2aBQhHnKCHCz98dVT1-hcZlIC_pd1F0r_HIS5H0JY1X7aHq6bdkRbugEISlbjbuJLIiv1DPb-SkCfEEtjATdoKVf9YLMq_SrywBUAlQrEV--teLgM40wlEoI6bE8ycHEEcIhIAjfv31l0eXFdcGIx");'>
+                            </div>
+                            <button
+                                class="mt-4 flex w-full items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                                type="button">
+                                <span class="material-symbols-outlined"> map </span>
+                                <span>Draw on Map</span>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-700" for="privacy">Privacy
+                                    Settings</label>
+                                <select
+                                    class="form-select w-full rounded-md border-slate-300 bg-white text-slate-900 focus:border-[#1193d4] focus:ring-[#1193d4]"
+                                    id="privacy">
+                                    <option value="public">Public - Anyone can view and join</option>
+                                    <option value="private">Private - Admins must approve new members</option>
+                                    <option value="hidden">Hidden - Only visible via direct link</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-700" for="moderation">Moderation
+                                    Settings</label>
+                                <select
+                                    class="form-select w-full rounded-md border-slate-300 bg-white text-slate-900 focus:border-[#1193d4] focus:ring-[#1193d4]"
+                                    id="moderation">
+                                    <option value="auto">Automatic - AI-assisted moderation</option>
+                                    <option value="manual">Manual - All posts require admin approval</option>
+                                    <option value="community">Community - Members can flag content</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex justify-end gap-4 border-t border-slate-200 pt-6">
+                            <button
+                                class="rounded-md bg-white px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-inset ring-slate-300 hover:bg-slate-50"
+                                type="button">
+                                Cancel
+                            </button>
+                            <button
+                                class="rounded-md bg-[#1193d4] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0f82b9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1193d4]"
+                                type="submit">
+                                Create Neighborhood
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
+{% endblock %}
