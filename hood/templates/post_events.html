@@ -1,0 +1,82 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-3xl mx-auto">
+        <div class="mb-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white">Submit a New Event</h2>
+            <p class="mt-2 text-lg text-slate-600 dark:text-slate-400">Share your event with the community.</p>
+        </div>
+        <form class="space-y-6">
+            <div>
+                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="event-title">Event
+                    Title</label>
+                <input
+                    class="form-input w-full rounded-lg bg-slate-200/50 dark:bg-slate-800/50 placeholder:text-slate-400 dark:placeholder:text-slate-500 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 transition-all"
+                    id="event-title" placeholder="e.g., Summer Block Party" type="text" />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                        for="event-date">Date</label>
+                    <input
+                        class="form-input w-full rounded-lg bg-slate-200/50 dark:bg-slate-800/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 transition-all"
+                        id="event-date" type="date" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                        for="event-time">Time</label>
+                    <input
+                        class="form-input w-full rounded-lg bg-slate-200/50 dark:bg-slate-800/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 transition-all"
+                        id="event-time" type="time" />
+                </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                    for="event-location">Location</label>
+                <input
+                    class="form-input w-full rounded-lg bg-slate-200/50 dark:bg-slate-800/50 placeholder:text-slate-400 dark:placeholder:text-slate-500 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 transition-all"
+                    id="event-location" placeholder="e.g., Central Park" type="text" />
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                    for="event-description">Description</label>
+                <textarea
+                    class="form-textarea w-full rounded-lg bg-slate-200/50 dark:bg-slate-800/50 placeholder:text-slate-400 dark:placeholder:text-slate-500 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 transition-all"
+                    id="event-description" placeholder="Tell us more about your event..." rows="4"></textarea>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Promotional
+                    Image</label>
+                <div
+                    class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-slate-300 dark:border-slate-700 border-dashed rounded-lg">
+                    <div class="space-y-1 text-center">
+                        <span
+                            class="material-symbols-outlined text-4xl text-slate-400 dark:text-slate-600">cloud_upload</span>
+                        <div class="flex text-sm text-slate-600 dark:text-slate-400">
+                            <label
+                                class="relative cursor-pointer bg-transparent rounded font-medium text-primary hover:text-primary/80 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary/50"
+                                for="file-upload">
+                                <span>Upload a file</span>
+                                <input class="sr-only" id="file-upload" name="file-upload" type="file" />
+                            </label>
+                            <p class="pl-1">or drag and drop</p>
+                        </div>
+                        <p class="text-xs text-slate-500 dark:text-slate-500">PNG, JPG, GIF up to 10MB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end gap-4 pt-4">
+                <button
+                    class="px-6 py-2 rounded-lg bg-slate-200/80 dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 hover:bg-slate-300/80 dark:hover:bg-slate-700/80 font-semibold transition-colors"
+                    type="button">Cancel</button>
+                <button
+                    class="px-6 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
+                    type="submit">Submit Event</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+{% endblock %}

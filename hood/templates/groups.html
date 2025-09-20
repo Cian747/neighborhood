@@ -1,0 +1,126 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+<main class="flex-1">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8 md:mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tighter">Find Your Crew
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Discover groups, connect with
+                    neighbors, and explore shared interests right in your community.</p>
+            </div>
+            <div class="mb-8 space-y-4">
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">
+                        search </span>
+                    <input
+                        class="h-12 w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark pl-12 pr-4 text-base focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
+                        placeholder="Search for groups like 'Hiking' or 'Book Club'" type="text" />
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <button class="px-4 py-2 text-sm font-medium rounded-full bg-primary text-white">All</button>
+                    <button
+                        class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Nearby</button>
+                    <button
+                        class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Online</button>
+                </div>
+            </div>
+            <div class="space-y-10">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Nearby Groups</h2>
+                    <div class="grid gap-6 md:grid-cols-2">
+                        <div
+                            class="group overflow-hidden rounded-lg bg-background-light dark:bg-gray-900 shadow-sm border border-gray-200/80 dark:border-gray-800/80 transition-shadow hover:shadow-lg">
+                            <div class="aspect-video bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlzeayVavZ0LLG8851cDKMvb3TGxZ7Nkc5zqb5XVbCaYCduqksa7LpJUCXPmK4NySomsS-gSmkAjnf9vNyULtQgrfRqFmmHQUqqZ4KlV7s-wfzS_YnMkUHuhizG6udKYZ04sgPxVb3sq9_V3fMnoRnbXAUTMI_LMxkpcO9Rj7UN-Y-U8pJJtjzd5eTJD-4OuFS9l9xrU8hgdTfjy3Pibk9MOcB5uGpdGMgxq8iq6mDsMBuGYAK0YjRnsbZpsnw4sM4hRsWhfzham48");'>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">120 members</p>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-1">Bookworms of Willow
+                                    Creek</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">A group for book lovers in
+                                    Willow Creek to discuss their favorite reads and discover new ones.</p>
+                                <button
+                                    class="mt-4 w-full h-10 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Join
+                                    Group</button>
+                            </div>
+                        </div>
+                        <div
+                            class="group overflow-hidden rounded-lg bg-background-light dark:bg-gray-900 shadow-sm border border-gray-200/80 dark:border-gray-800/80 transition-shadow hover:shadow-lg">
+                            <div class="aspect-video bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnh_nuYCP0U97bujRofumngJVsro6rxjyscbiTideR5_Pvtvfj0e8pr6bdPTbaEtQj-Vz8Q9b16H-Fn1tIS9rlh7uqaaFqGu5tuwByRUKk8VaO5M_xqQBUZtUuYjV7VZJ0oA9Fr9hd2P-jUlZ74QA8DLHvtXWkdgp6a6e3e3N95n3KgyMjpTl50OT5rpoHWb6M_fPnFSei8vLQlwlvi25lzUk7V8kjRi5l7gwIfRSwQjJOHRH2nY_euuIC_csR-__ihyj99BTP5vgM");'>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">85 members</p>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-1">Willow Creek Hiking
+                                    Club</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Explore the beautiful trails
+                                    around Willow Creek with fellow hiking enthusiasts.</p>
+                                <button
+                                    class="mt-4 w-full h-10 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Join
+                                    Group</button>
+                            </div>
+                        </div>
+                        <div
+                            class="group overflow-hidden rounded-lg bg-background-light dark:bg-gray-900 shadow-sm border border-gray-200/80 dark:border-gray-800/80 transition-shadow hover:shadow-lg">
+                            <div class="aspect-video bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3FmbJ5x_YBbf3fcl4bSlDw-3uDUAj1MbDUBhVoyJe3BfGQAFhBBF7en0KPSpI3eOVcsudDi-Mm3ObAniVZySEVfIN6Q0Gemp6Y4SwFnRVhAYX9YkBMcCYJ-CL6J2_S_yf11i88ovsFFbGOIEQy0BSBzkxDgHrl1aRecw07VMjIO_33qYQXQpxKnvIQ1ceJgUaNMjFXGE1RH2wzYWkGFpLtiNDBo3Z5hVilGu978P0-vfzdun4N7TmHWgTmSuXaXYQntLlyKf5e6Bt");'>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">60 members</p>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-1">Willow Creek
+                                    Photography Group</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Share your photography skills
+                                    and explore the scenic beauty of Willow Creek through your lens.</p>
+                                <button
+                                    class="mt-4 w-full h-10 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Join
+                                    Group</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Online Groups</h2>
+                    <div class="grid gap-6 md:grid-cols-2">
+                        <div
+                            class="group overflow-hidden rounded-lg bg-background-light dark:bg-gray-900 shadow-sm border border-gray-200/80 dark:border-gray-800/80 transition-shadow hover:shadow-lg">
+                            <div class="aspect-video bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdmkb1NKKrVC5wKTNTk-BE9o3ChUUg4sg2oJXtLv-RWTlU1rxDt5jBxHj4G1UxOo0fmIJw9DlUUIFIEUNuBUwmwqsazz49QIDbTH1uHU90xRRJ3Rqg3Vzeb7J6v0AO_3gt8YQgSpZzOt8xY9kIM4s7QEAmhDLxpV_MNcHnVnaWH9gDZ84Qlkyjq5Jbk6-8GjiEXF_gaLsKqWHQhD2Z6lFLD6YHTkC2A9wBA1nhYpHOX2r3Nf42Ec2gw1ujljl8u_tmTcWf9cmYWES1");'>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">250 members</p>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-1">Virtual Book Club</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Join our online book club to
+                                    discuss a new book every month from the comfort of your home.</p>
+                                <button
+                                    class="mt-4 w-full h-10 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Join
+                                    Group</button>
+                            </div>
+                        </div>
+                        <div
+                            class="group overflow-hidden rounded-lg bg-background-light dark:bg-gray-900 shadow-sm border border-gray-200/80 dark:border-gray-800/80 transition-shadow hover:shadow-lg">
+                            <div class="aspect-video bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgbTCdEQTzwd8iIAq5ElGCdbX-Lm-2TvbMvfWv67JJvMWoxQ5wqPdwvAWaeptQ0CpVGCmrBCqjssqpOCLDqAzGC_JIv3B1RxSyGLU5NU4Lefl8zTEHe-KIM01QlNicwI9AMzAcjntHIAkk29UwvEN9L7AHcyDA1baoH0mGsW1wWMegKqXQUfy6VbWaZ8X_ucjmQ0e7zpq7PKDZoz-knRh-HrOrP-hjcEf4MG3dh3Ywn0Xi-fLYYsF0mu-nA-BoX0KjIYODKRHzyDla");'>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">150 members</p>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-1">Online Gaming Community
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Connect with gamers from Willow
+                                    Creek and beyond for online multiplayer fun.</p>
+                                <button
+                                    class="mt-4 w-full h-10 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Join
+                                    Group</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

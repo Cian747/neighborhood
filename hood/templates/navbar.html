@@ -7,7 +7,7 @@
       </a>
       <nav class="hidden md:flex items-center gap-6">
         <a class="text-base font-medium text-text-secondary hover:text-primary-color transition-colors"
-          href="#">Home</a>
+          href="/dashboard/">Home</a>
         <a class="text-base font-bold text-primary-color" href="#">Events</a>
         <a class="text-base font-medium text-text-secondary hover:text-primary-color transition-colors"
           href="#">Groups</a>
@@ -30,10 +30,19 @@
         <span class="material-symbols-outlined">notifications</span>
         <span class="absolute top-1 right-1 block h-2 w-2 rounded-full bg-red-500"></span>
       </button>
+      {% if user.is_authenticated %}
       <button>
         <img alt="User avatar" class="h-10 w-10 rounded-full object-cover"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzB9MN7Nz0pHv4K9y5WqsZGSsy1Fx-iHMlrY8bcBLcXy2I9SqBy79XndnbDInU3_QshKHa6bRGNSg6zMkvMjBRKwepVkkFdttEjn9EKhfv7464ZbLvF8AtvTk_s1faGjyZa3Xh1ByG3N4GcKDdquQpCKyVLyvJwqBB8egGXzX6rmaCCeRyg9Nif67i6YS6OIdyyTgbJkpJm0DNWly6RO1lpjtNYjlqPjdReQ7FNd38axh_t48MrOlv6mHwT1KyHueBrMrjYSVpujMy" />
       </button>
+      {% else %}
+      <div class="flex items-center gap-4">
+        <a class="hidden sm:inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-primary-100 text-primary-700 text-sm font-bold leading-normal tracking-wide hover:bg-primary-200 transition-colors"
+          href="{% url 'login_user' %}">
+          Log In
+        </a>
+      </div>
+      {% endif %}
     </div>
   </div>
 </header>
