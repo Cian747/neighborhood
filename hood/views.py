@@ -21,13 +21,15 @@ def landing_page(request):
 
 @login_required
 def dashboard(request):
+    user_profile = Profile.objects.get(user=request.user)
     neighborhoods= Neighborhood.objects.order_by("created_at")
     meetings = Meeting.objects.order_by("created_at")
     businesses = Business.objects.order_by("id")
     return render(request, "dashboard.html", {
         "news": neighborhoods,
         "events": meetings,
-        "businesses": businesses
+        "businesses": businesses,
+        "user":user_profile
     })
 
 def register_user(request):
@@ -88,9 +90,9 @@ def login_user(request):
     if request.method == 'POST':
 
         username = request.POST.get('username')
-        print(username)
+        # print(username)
         password = request.POST.get('password')
-        print(password)
+        # print(password)
 
         user = authenticate(request, username = username, password = password)
 
