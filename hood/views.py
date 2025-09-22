@@ -142,6 +142,12 @@ def neighbor_events(request):
     '''
     return render(request,'hood_events.html')
 
+def neighbor_groups(request):
+    '''
+    See neighborhub events
+    '''
+    return render(request,'groups.html')
+
 def create_hood(request):
     '''
     Registered Admins will be abale to create neighborhoods

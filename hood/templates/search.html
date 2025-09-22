@@ -3,7 +3,141 @@
 
 {% block content %}
 
-<div class="container">
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-8">
+      <div class="relative">
+        <span
+          class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 text-2xl">search</span>
+        <input
+          class="form-input w-full min-w-0 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900/50 h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 pl-14 pr-12 text-base font-normal"
+          value="Community" />
+        <button
+          class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+    </div>
+    <div class="mb-8">
+      <div class="border-b border-gray-200 dark:border-gray-700">
+        <nav aria-label="Tabs" class="-mb-px flex space-x-6">
+          <a class="shrink-0 border-b-2 border-primary px-1 pb-4 text-sm font-semibold text-primary" href="#">All</a>
+          <a class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600"
+            href="#">News</a>
+          <a class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600"
+            href="#">Events</a>
+          <a class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600"
+            href="#">Businesses</a>
+          <a class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600"
+            href="#">Groups</a>
+        </nav>
+      </div>
+    </div>
+    <div class="mb-8">
+      <h3 class="text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Sort by</h3>
+      <div class="flex flex-wrap gap-2">
+        <button
+          class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-300">Relevance</button>
+        <button
+          class="px-4 py-1.5 text-sm font-medium rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Date</button>
+        <button
+          class="px-4 py-1.5 text-sm font-medium rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Popularity</button>
+      </div>
+    </div>
+    <div>
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Showing 8 results</h3>
+      <div class="space-y-2">
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdNjA_ReVGMqNOXhR-rYd36eFaFdEBdWeIXF7CdFw0VFbFZqIEY1dwIE51QvoJxSDydWYkPGzJHm8Ysy_Vmxi4MfEPTq75c0cikVExhl4WRd6xAKu3MoxVq_spUAaqOeYG4IFLRi5K6rut2jVi9_yYtT3DN8MW3OQwcl-orJlCjwZaE4nNu6UquPEN4XNWxUgWrlq3olbUSA-erYPWwlsCPrmYchJyiIB8ePinsBmTQqwVojKPpqfdTlFeMGpaQEvMleJx9_q8CcIS");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">Community Garden Expansion Approved
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Local News · 2 days ago</p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB--1iiFv2ODTAlhCKTYWc2Po6YScQbWLDPIC62L5Hwlv1Hz5AiHUQawjFwQRt8lZ-jS_X67PUyGAnkdwDXmmxvPijaWnMBVKQfyMtMmLrJyWa3Qnm_g1DZvM2goe3xDP8QuOoD_r_YoesEeHIjpgnEh5Z9BPM3IjMsoSClACpOSVAjEvlqPwtAMABg_Why3MqL2QZ9Jc9sN2HG5isO0wFlZRPHw106-KqhZahHJ0q3H0sGyMuQb-ueY8C1VkceOImK3K49EKUG1hid");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">Neighborhood Watch Meeting Scheduled
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Local News · 1 week ago</p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpnqK4GKsVYbTDdyEx5ElChjxMrRYZOHx9SSLNb1jiPfzQNXi8lqUAQQ3y6Wp_6lb-4DuZEuTzNDDJQ7VxslstzR-bR2zAg6tQ3H41xFdqyvnmUfkS5N4LBgZvfoFJvaESDJca9EChw7S11WRMPHeASGESopKSVpT32yA0lWYIFyU-OU8D2cUDXWrvdnQMiSFngpvc86L9wn8OBcErzJoLPBLDVzidtx0bHz0zdVnDByDNuoV4Bf0rc4MeXGK01O_0NxQo8HOw9wxW");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">Farmers Market at Central Park</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Events · Tomorrow</p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7fbSg1xpXkHKj8Mem9izx3wBDaB6QEebSLh9p_W3y9TKFfPfkLNqTtEF1JvLY8Df960s2AV61-R4P2ZhNpNGJlsxclMjFmF-9kqGb16WQBHv75TLzNh2uchWlvnl2Gb1upWk3kj5F9DlnPY5slNc9MaveqnhzRKoW-51hOsZqSmvTP50k_oBkXzkoUdZ3CB8G4mx1t8WDR2BmDfMDSpYdoMhltdK1HD2haRYMlgNJlCNqtOe-BYNUJiG2tKG82tCmbZAx08UQGAF9");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">Community Cleanup Day</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Events · Next Saturday</p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCj9Q6IENH-EKkdZuoKqSHN8M9eu9e5VTRWEE1OZTyZ5jmZrBqKPot-J5VwlSpB7a-JVzbAkJSuZh8Dj6GmaADbEZwYYoIirBFspj0ZqytQoIHfKi8JtbT5Ijv8ZunfXp6Fzx8F-SaLOUStEfr1etVB_CJ6KNd5sRNzZUdbvB1PPjPbUtdcGg6RGjQpRceaqWtU2VgVHherDTpei1GVCVHK25ojKA59rukRpSMTLGHRBccreGcUWt810neQ_UYbtlMbGOPTEev3zGjZ");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">The Corner Cafe</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Businesses · Open Now</p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlwobXrgiNtWvhpBLGZpj90nyLLiPXEkOEGvKUsxJIHa0RhS-fbdNA1vgNKPoTLypjTrFbx4aHwMqeVNdLybIehyEbzctAISI_g3e8CQEqrNlWPGeOHWfDbInYvV0CfOrecKxomMrs639OxevTRdjbHr5a4h1KScW9LXuddl9aJNlR7Y_eXrQhv51mOMvlTtOvjDv4_qNeuXSMfB96meVi8YZpwqG--Fu01CXlEV8xz0LoiW2SQdY4-aM9LnUhN4r1CC79bFl_cKNy");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">Green Grocer</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Businesses · Open Now</p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmkhcr0uzAX1fcARMCe3MAYkEOaDFBgiin6387DIpKLjW0tYMETcJskkzjOXOTT0TLIKAPDHznC_MiBb7esWalWQimSf-OkWvqEor4Xyy68TvfIlnUX8BvbNZlZKY7biUDXm18WDCtCdxL3kBwAme9XdGw0oNa6nnLs5kC9ONc99gDZvUkL1Oq3c5IYsEdYypcGKhDUN_Q33Yr3NvFvNhvjKkQsCr0rOHEhXgu4agv1Iq6CnlPcEoayp9aQae3N4PhZK51gsyFJh3W");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">Book Club</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Groups · 250 members</p>
+          </div>
+        </div>
+        <div
+          class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/40 transition-colors duration-200">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16 shrink-0"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTh3yD0mXO-ZWuhCGsh9iAykhmhSeUxskfiGrwtSJBWdtAErTw1qu6uIgMWD1OU4bII9HSohYzdTThqiS5NoNIEAfjSqI4CNRvWp9qwZmjmb0myXOK_TtbiKgWQu_TmGVabazHqvoMTtyBtv3SKouxoriVBcIqDMxXnXvbcv9Kg1jFX3LJh6aOoNC0ZR0w7US8rf4B9hB5MmfI7_qcLDbpAu2Kd65DIY93dO8nuHjDVIz_uuKin2aDgFbkV1dA2xw4UbZaJuTEm0UP");'>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-semibold text-gray-800 dark:text-gray-100 line-clamp-1">Hiking Group</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">Groups · 150 members</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
+<!-- <div class="container">
   <div class="finder">
     {% if results %}
     <h4>Found {{ results | length }} on {{ message }} search</h4>
@@ -31,6 +165,4 @@
         </div>
     </div>
 
-</div>
-
-{% endblock %}
+</div> -->
