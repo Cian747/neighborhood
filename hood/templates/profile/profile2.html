@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="flex-1 w-full max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-1 space-y-8">
+            <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32 mx-auto"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxpsGKdsf32ha3lt2vea9b4E6zN-cn32PgjJIahkZaYzkwtbRkNyvSFXLDDjPyl3UMC1fa8yyu787igDV889Vp4QqRrljZKp_ukHK3UWfj8v5LHEzw4B5RA5xVcz1ulX7FmDDJBJjSqlu1WxhyivzKCiQUU1lRo7u5fDVnUORwWeLLkL3bThA0C72DVe1rkUbmtFRiQjCctznnESvTy3elCuhLN2706KvFIRMZWOtUjFOwSsEMnoav-TwzwTF6EGwDpgVz3s0Xqwlj");'>
+                </div>
+                <h1 class="text-2xl font-bold mt-4">Jane Doe</h1>
+                <p class="text-slate-600">jane.doe@example.com</p>
+                <p class="text-slate-500 mt-2">Sunnyvale, CA</p>
+                <p class="mt-4 text-slate-700">Community enthusiast, loves gardening and local meetups.</p>
+                <button
+                    class="w-full mt-6 px-4 py-2 text-sm font-medium text-white bg-[#1193d4] rounded-md hover:bg-[#0f82b9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1193d4]">
+                    Edit Profile
+                </button>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h2 class="text-xl font-semibold text-slate-800 mb-4">Joined Groups</h2>
+                <ul class="space-y-3">
+                    <li class="flex items-center space-x-3">
+                        <div
+                            class="bg-green-500 rounded-full size-8 flex items-center justify-center text-white font-bold">
+                            G</div>
+                        <span class="font-medium text-slate-700">Gardening Club</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <div
+                            class="bg-blue-500 rounded-full size-8 flex items-center justify-center text-white font-bold">
+                            B</div>
+                        <span class="font-medium text-slate-700">Bookworms Society</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <div
+                            class="bg-purple-500 rounded-full size-8 flex items-center justify-center text-white font-bold">
+                            H</div>
+                        <span class="font-medium text-slate-700">Hiking Enthusiasts</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="lg:col-span-2 space-y-8">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-2xl font-semibold text-slate-800">Your Business</h2>
+                <p class="mt-1 text-slate-600">Promote your local business within the community.</p>
+                <div class="mt-6 bg-slate-100 rounded-lg p-6 text-center">
+                    <h3 class="text-lg font-medium text-slate-800">No registered businesses yet.</h3>
+                    <p class="mt-2 text-slate-500">Register your business to connect with your neighbors and grow your
+                        customer base.</p>
+                    <button
+                        class="mt-4 px-6 py-2 text-sm font-medium text-white bg-[#1193d4] rounded-md hover:bg-[#0f82b9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1193d4]">
+                        Register Your Business
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-2xl font-semibold text-slate-800">Registered Businesses</h2>
+                <div class="mt-6 space-y-6">
+                    <div class="flex items-start space-x-4 border border-slate-200 rounded-lg p-4">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-md size-24"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqyLOWPZQ3hIFQgMMdB0MotWGe79jG0YpyZa3n9zQKm9-HR2xnxqJRp0g3xFpe7jlGnnTiJcJ41skOT1v9Lfl7WXJ3aspD0BAvAHXfL5lJ2IOIO5G8tj0w6IAIRqvkHl83HifnUDzJhM1j8wpiMMgm3JHlNKjOO7Ekyq4JMLZK881kRbDH3JUjFwsAIhPneHiyZ-Rp6iJVBZcBEW20vJr40P9Ec2-_V7SIzqS8zTmLFIm_C-tO6PskWzDZDn7sPhV3UvLX_9rOntYW");'>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold text-slate-800">Jane's Flower Shop</h3>
+                            <p class="text-slate-600 mt-1">Beautiful bouquets for every occasion.</p>
+                            <p class="text-sm text-slate-500 mt-2">123 Main Street, Sunnyvale, CA</p>
+                            <div class="mt-3 flex space-x-2">
+                                <a class="text-sm font-medium text-[#1193d4] hover:underline" href="#">View</a>
+                                <a class="text-sm font-medium text-slate-600 hover:underline" href="#">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

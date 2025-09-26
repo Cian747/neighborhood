@@ -148,6 +148,12 @@ def neighbor_groups(request):
     '''
     return render(request,'groups.html')
 
+def neighborhood_businesses(request):
+    '''
+    See neighborhub businesses
+    '''
+    return render(request,'business_page.html')
+
 def create_hood(request):
     '''
     Registered Admins will be abale to create neighborhoods
@@ -273,7 +279,3 @@ def search_for_business(request):
         message = "You haven't searched for any term"
         return render(request,'search.html',{"message":message})
 
-
-
-
-# User profile

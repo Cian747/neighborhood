@@ -1,0 +1,187 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<main class="flex flex-1 justify-center py-10">
+    <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 text-center">
+            <h1 class="text-4xl font-black text-background-dark dark:text-background-light sm:text-5xl">Local Businesses
+            </h1>
+            <p class="mt-2 text-lg text-background-dark/70 dark:text-background-light/70">Explore the diverse businesses
+                that serve our community.</p>
+        </div>
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div class="relative flex-1">
+                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                    <svg class="text-background-dark/50 dark:text-background-light/50" fill="currentColor" height="20px"
+                        viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                        </path>
+                    </svg>
+                </div>
+                <input
+                    class="h-12 w-full rounded-lg border-0 bg-background-light dark:bg-background-dark text-background-dark dark:text-background-light shadow-sm ring-1 ring-inset ring-primary/20 placeholder:text-background-dark/50 dark:placeholder:text-background-light/50 pl-12 pr-4 text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Search for businesses..." />
+            </div>
+        </div>
+        <div class="mb-8 flex flex-wrap items-center gap-2">
+            <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 px-4 text-sm font-medium text-background-dark dark:bg-primary/20 dark:text-background-light hover:bg-primary/20 dark:hover:bg-primary/30">
+                <span>Category</span>
+                <svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                    </path>
+                </svg>
+            </button>
+            <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light px-4 text-sm font-medium text-background-dark ring-1 ring-inset ring-primary/20 dark:bg-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20">
+                <span>Rating</span>
+                <svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                    </path>
+                </svg>
+            </button>
+            <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light px-4 text-sm font-medium text-background-dark ring-1 ring-inset ring-primary/20 dark:bg-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20">
+                <span>Open Now</span>
+                <svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                    </path>
+                </svg>
+            </button>
+            <button
+                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light px-4 text-sm font-medium text-background-dark ring-1 ring-inset ring-primary/20 dark:bg-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20">
+                <span>Deals</span>
+            </button>
+        </div>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBtGKk6Mch7oG3tF33cqA8OjM-UgpgpimWbznvU2HelROawX8R8qQ6LfsST4ZoUEB17Tsijy1QFrac-x4cFgq2tWDiWZtKmrPxQ0c0QtXWON3rQNDTSjxuUw3rHYrrQnOPeU7jJl7qkosRC3MR-6kLcgYJYMLbHmlL2_vbnu34jF-8Cmee0c1_TJIZf_4KacEDlGOi-YzFJv2Xpvi-vBIKXninE6MJUKuGRilwxVtzmnGspkD4Tjc1LUWCaxzuy0Rm7SwiFi8VaPhq");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">The Corner Cafe</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">Cozy cafe serving coffee
+                        &amp; pastries.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoJV4WUpOEv8mmJv5R_0AjKpZN6811Z8kPs0mjHVSA3c0yOLrAX3o-t1cmLR-CJxPS7lcDhkVbbJzLWJ_bT3cXLSuJ-VVyR3H1r9tjxVhExQZqQLEJAo3QKpmuASmSmZnnU6Co3U-ndnCRE9m2wOtLnSLX7rpqTvPWosE6ryL-Zku4qSRLjkQLtDjsfKqsUP4Y_X8PFUjzWc-Bd5GleVfzosM0zzTD5_sOEMJeK3_z1r9OxNlrFPTWmjbozlHKFu-8Vt92zBFK0wQv");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">Green Leaf Landscaping</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">Landscaping services for
+                        homes.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUZWbTSN3-RfRldXJqR2te5vnlX453dCspOOM_Lujs5Ufn6ZvtB28-4-LRIFJMhYhJ1PsJRTbo44ocl5sQhZxudL3CEpO4y87a4xKcxAiHM1LsN3f5NssyabgXkn-JZ8cz4yln0KXIM2B2LqLG7guKymkfiY36gozD810ifs3fE7iieRHpTxYjdgQ6gWcfvxtvz_5vM-x7fnw0P0fs5tNFBiaWH22emNkY2DXjU8dWKHaAlCIxbg_rj-1rAgdMTfKonYtxyuhcHAqn");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">Pawsitive Pet Care</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">Loving care for your furry
+                        friends.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-lXdZ8oYeb5ch43hnStwfpSoyZLWoDMu4joPyG-sDoglmy_WhQw_qHoRRNeX5rvyBCIF8NuwKpm9bD3EVzLPGY6zKuX_iMplQ6W4Afz5cQs_tZRfiWIGzkhdtd3TQ_fRIvGLFB6N5Ln9LLWeQ5lc2XIgdibHobcQhSsyyz5EN74wEz6zHxRhwEv__Bks5Dw-IScCzeujVXzns3U6R1q2aOPYhGnzPMvTn-1LG0FIywe5SrPPq0WXJIOIMsUcQ9m7YdqxJaT5zRN7K");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">Tech Solutions Inc.</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">IT support for homes and
+                        small businesses.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7dJaW15pOLkop7BURXQbr1Fx3uULPJpQmAl8oC7ZJryIgVlbGKdRMYxhWl3FP7Y-Y6IftHhVjM27b35JskRoeURcXp52co7GmmEtYip7i4HvBOiO74i3xLa8sxrVi94DNOXFoqumsTv6dHQW0I4w1sx1IAkutBwfm14bg51z-xshcUzkdKOiHvjqPqHeiOi5kaQ3yoI0Cr8BV0-CgU3oZQHbY5EyRFnHMBt5YP-7W7NfxewwjkHZQ15EXdZPbKQUVQHhT3a1pjWMz");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">Maria's Bakery</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">Homemade cakes, cookies,
+                        and breads.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRzh7T3LzN65L4DGPp75O6w8D0W6JJddpWGd5SFwcyqBwkmUXMtf_88YO15IXJRAKeW5SqhC6GuWkFbOAvkZRwA4hL_EgKBjSgT2-W8KzPfAIlxJjX8QkJ47efpdRnKibNH4h4cZ3Yu2IfFRk6pem4Rx-D3qxg7Pq8NWeMxct7sVCCRZ8TMC9LYWzJK0jQzteU-gJYTY6yJd4Hd3lVJ2m5o7T4hiBgaTVpSlcApCTGBHW7xf0V9JgMsir3Hs-q4nRnAiIAXHkUP0ts");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">Quick Fix Plumbing</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">Reliable plumbing repairs
+                        &amp; installations.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA60XACCS8gh4ww6Bm3gvYlF55dx3uxCGAblqNFUyHoAbUHTcMCYnLVNy0s0foCEdJOvY_zuW5srdB3Z9wEUL28gHKI7GMXccsz26xosHFIFuot9qx5cRrVqP9SvdsBSQAHVzh__Nnobm8MJKGrQVFSs6sdtUsgf93NyNyvc0zLUPNrwxrnIVo9jtMjtlOJS39ONZNe7BpDQGXqguJEyJkqhf8s1nWbHfrCFbndHXX13FxU5OTZI7DtZXGCEUp3Qiw28HdILI-wWNRy");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">The Book Nook</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">Independent bookstore with
+                        author events.</p>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 overflow-hidden rounded-lg bg-background-light shadow-sm ring-1 ring-primary/10 dark:bg-background-dark dark:ring-primary/20">
+                <div class="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6PKWRqQi_QmUR4EPsz_tliZVD4hb8-HorQefHnlTr1vGLxOubzfPSq3e39dHB-UZV5iqWtBIcEIN-kl_3BP8y8HqvFMs8RErshExKGfzakH1SFEzYwnheeUe5Hq5TFgqmXStil4_GkB4nshTIi442KoneUd9-701sWfDUJBYFdpa3Wo23ufk01XvGxTxdIWnCfn8gfKQJlgnxxFIP-BWLrEN727dUJThpwHg55Xjsxl9YSNHWH12QQqJ58fBWDwlv-59iApWOpcIP");'>
+                </div>
+                <div class="flex flex-col px-4 pb-4">
+                    <p class="font-bold text-background-dark dark:text-background-light">Fitness First Gym</p>
+                    <p class="text-sm text-background-dark/70 dark:text-background-light/70">State-of-the-art gym with
+                        fitness classes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 flex items-center justify-center">
+            <nav class="flex items-center gap-2">
+                <a class="flex h-9 w-9 items-center justify-center rounded-full text-background-dark/60 dark:text-background-light/60 hover:bg-primary/10 dark:hover:bg-primary/20"
+                    href="#">
+                    <svg fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+                    href="#">1</a>
+                <a class="flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:bg-primary/10 dark:hover:bg-primary/20"
+                    href="#">2</a>
+                <a class="flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:bg-primary/10 dark:hover:bg-primary/20"
+                    href="#">3</a>
+                <span
+                    class="flex h-9 w-9 items-center justify-center text-sm font-medium text-background-dark/60 dark:text-background-light/60">...</span>
+                <a class="flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:bg-primary/10 dark:hover:bg-primary/20"
+                    href="#">10</a>
+                <a class="flex h-9 w-9 items-center justify-center rounded-full text-background-dark/60 dark:text-background-light/60 hover:bg-primary/10 dark:hover:bg-primary/20"
+                    href="#">
+                    <svg fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+                        </path>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </div>
+</main>
+{% endblock %}

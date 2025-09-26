@@ -13,6 +13,7 @@ urlpatterns = [
     path('news/', views.neighbor_news,name='neighborhub_news'),
     path('events/', views.neighbor_events,name='neighborhub_events'),
     path('groups/',views.neighbor_groups,name = 'groups'),
+    path('business/',views.neighborhood_businesses,name = 'businesses'),
     path('new-hood/',views.create_hood, name="create_hood"), 
     # path('register/',views.register_user,name='register'),
     path('register/',views.register_page,name='register'),
